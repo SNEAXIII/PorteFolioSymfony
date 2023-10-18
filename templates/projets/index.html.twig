@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProjetsController!{% endblock %}
+
+{% block body %}
+    <h1>Projets</h1>
+    {% for element in tableauProjets %}
+        {{ element }}
+    {% endfor %}
+{% endblock %}

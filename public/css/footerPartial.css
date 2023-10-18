@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 97%;
+    margin:auto;
+    font-size: 23px;
+    /*border: solid 2px red;*/
+}
+footer div
+{
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+footer div a
+{
+    text-decoration: underline;
+}
