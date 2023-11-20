@@ -14,10 +14,10 @@ class globalVarTwig implements EventSubscriberInterface
         {
             $GLOBALS[$id] = $icon;
         }
-        foreach (getProjetObjects() as $id => $projet)
-        {
-            $GLOBALS[$id] = $projet;
-        }
+//        foreach (getProjetObjects() as $id => $projet)
+//        {
+//            $GLOBALS[$id] = $projet;
+//        }
 
     }
 
