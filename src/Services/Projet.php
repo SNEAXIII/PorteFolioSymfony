@@ -36,7 +36,7 @@ class Projet
 function getProjetVars():array
 {
     $toReturn = [];
-    $toReturn[]=new Projet
+    $toReturn["SuperBreaker"]=new Projet
     ("Super Breaker",
     "https://github.com/SNEAXIII/Super_Breaker",
     "",
@@ -49,7 +49,7 @@ function getProjetVars():array
     2021,
     "Python 3"
     );
-    $toReturn[]=new Projet
+    $toReturn["StarInvader"]=new Projet
     ("Star Invader",
     "https://scratch.mit.edu/projects/636081295/fullscreen/",
     "",
