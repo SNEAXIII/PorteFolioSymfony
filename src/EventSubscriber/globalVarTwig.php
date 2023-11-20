@@ -5,7 +5,6 @@ namespace App\EventSubscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
-use function App\Services\getProjetVars;
 
 class globalVarTwig implements EventSubscriberInterface
 {
@@ -15,7 +14,7 @@ class globalVarTwig implements EventSubscriberInterface
         {
             $GLOBALS[$id] = $icon;
         }
-        foreach (getProjetVars() as $id => $projet)
+        foreach (getProjetObjects() as $id => $projet)
         {
             $GLOBALS[$id] = $projet;
         }

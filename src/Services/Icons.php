@@ -1,5 +1,5 @@
 <?php
-function getIconVars()
+function getIconVars(): array
 {
     $icons = [];
     $icons["blue"] = "#ffffff";
