@@ -1,8 +1,0 @@
-        {% set titre = projet.titre %}
-        {% set lienProjet = projet.lienProjet %}
-        {% set lienDemo = projet.lienDemo %}
-        {% set lienImage = projet.lienImage %}
-        {% set description = projet.description %}
-        {% set classeRealisation = projet.classeRealisation %}
-        {% set anneeRealisation = projet.anneeRealisation %}
-        {% set languageUtlises = projet.languageUtlises %}

@@ -3,6 +3,7 @@ namespace App\Twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
+use function App\Services\getProjetObjects;
 
 class AppExtension extends AbstractExtension
 {
@@ -10,8 +11,8 @@ class AppExtension extends AbstractExtension
     {
         return [
             new TwigFunction('printGlobVars', [$this, 'printGlobVars']),
-            new TwigFunction('getGlobVars', [$this, 'getGlobVars']),
-            new TwigFunction('getProjets', [$this, 'getProjets']),
+//            new TwigFunction('getGlobVars', [$this, 'getGlobVars']),
+//            new TwigFunction('getProjets', [$this, 'getProjets']),
         ];
     }
 
@@ -19,13 +20,13 @@ class AppExtension extends AbstractExtension
     {
         echo $GLOBALS[$variableName];
     }
-    public function getGlobVars($variableName): mixed
-    {
-        return $GLOBALS[$variableName];
-    }
-    public function getProjets(): array
-    {
-        return getProjetObjects();
-    }
+//    public function getGlobVars($variableName): mixed
+//    {
+//        return $GLOBALS[$variableName];
+//    }
+//    public function getProjets(): array
+//    {
+//        return getProjetObjects();
+//    }
 
 }
