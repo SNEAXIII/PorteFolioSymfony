@@ -8,15 +8,18 @@
         {% set titre = projet.titre %}
         {% set lienProjet = projet.lienProjet %}
         {% set lienDemo = projet.lienDemo %}
+        {% set lienImage = projet.lienImage %}
         {% set description = projet.description %}
         {% set classeRealisation = projet.classeRealisation %}
         {% set anneeRealisation = projet.anneeRealisation %}
         {% set languageUtlises = projet.languageUtlises %}
+
         <h2>{{ titre }}</h2>
         <p>{{ description }}</p>
+        <img src="{{ asset(lienImage) }}" alt="">
         <a href="{{ lienProjet }}">Lien vers le projet</a>
         <a href="{{ lienDemo }}">Lien vers la démo</a>
         <p>Réalisé en {{ classeRealisation }}, {{ anneeRealisation }}</p>
-        <p>Langues utilisées : {{ languesUtilisees }}</p>
+        <p>Langues utilisées : {{ languageUtlises }}</p>
     {% endfor %}
 {% endblock %}
