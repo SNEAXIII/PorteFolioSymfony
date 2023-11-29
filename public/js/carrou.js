@@ -25,12 +25,8 @@ document.body.onload = function () {
         div.style.backgroundImage = "url(" + image + ")";
         container.appendChild(div);
     }
-    g.onclick = function () {
-        clicGauche()
-    }
-    d.onclick = function () {
-        clicDroit()
-    }
+    g.onclick = clicGauche
+    d.onclick = clicDroit
     function moove() {
         container.style.transform = "translate(" + p * 800 + "px)";
         container.style.transition = "all 0.5s ease"
