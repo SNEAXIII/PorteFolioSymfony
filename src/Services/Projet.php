@@ -9,6 +9,7 @@ class Projet
     public string $classeRealisation;
     public string $anneeRealisation;
     public string $languageUtlises;
+    public string $lienImage;
 
     /**
      * @param string $titre
@@ -18,8 +19,9 @@ class Projet
      * @param string $classeRealisation
      * @param string $anneeRealisation
      * @param string $languageUtlises
+     * @param string $lienImage
      */
-    public function __construct(string $titre, string $lienProjet, string $lienDemo, string $description, string $classeRealisation, string $anneeRealisation, string $languageUtlises)
+    public function __construct(string $titre, string $lienProjet, string $lienDemo, string $description, string $classeRealisation, string $anneeRealisation, string $languageUtlises, string $lienImage)
     {
         $this->titre = $titre;
         $this->lienProjet = $lienProjet;
@@ -28,14 +30,15 @@ class Projet
         $this->classeRealisation = $classeRealisation;
         $this->anneeRealisation = $anneeRealisation;
         $this->languageUtlises = $languageUtlises;
+        $this->lienImage = $lienImage;
     }
 }
-//
-function getProjetObjects():array
+    function getProjetObjects():array
 {
     $toReturn = [];
     $toReturn["SuperBreaker"]=new Projet
-    ("Super Breaker",
+    (
+        "Super Breaker",
         "https://github.com/SNEAXIII/Super_Breaker",
         "",
         "Super Breaker est une version modernisée du jeu Brick Breaker. Ce projet à été réalisé dans le cadre d'un"
@@ -45,10 +48,12 @@ function getProjetObjects():array
         ." sur sur la barre où j'ai du utiliser le théorème des barycentres dans mes calculs.",
         "1ère Terminale",
         2021,
-        "Python 3"
+        "Python 3",
+        "images/projets/SuperBreaker/Menu_Super_Breaker.png"
     );
     $toReturn["StarInvader"]=new Projet
-    ("Star Invader",
+    (
+        "Star Invader",
         "https://scratch.mit.edu/projects/636081295/fullscreen/",
         "",
         "Star Invader est une version modernisée du jeu Space Invader avec un thème Star Wars. Ce projet à été réalisé"
@@ -58,7 +63,8 @@ function getProjetObjects():array
         ."réaliser ce jeu.",
         "4ème",
         2017,
-        "Scratch 2"
+        "Scratch 2",
+        "images/projets/SpaceInvader/Menu_Space_Invader.png"
     );
     return $toReturn;
 }
