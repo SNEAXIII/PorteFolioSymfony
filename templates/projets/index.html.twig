@@ -3,9 +3,10 @@
 {% block title %}Hello ProjetsController!{% endblock %}
 
 {% block body %}
+    <link rel="stylesheet" href="{{ asset('css/carrousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/projet.css') }}">
     <screen>
         <h1>Mes Projets</h1>
-        <link rel="stylesheet" href="{{ asset('css/carrousel.css') }}">
         <div id="carrousel">
             <div id="container">
             </div>
@@ -16,32 +17,30 @@
             const index = 0;
             const tab = [
                 "{{ asset('images/projets/SuperBreaker/Menu_Super_Breaker.png') }}",
-                "{{ asset('images/projets/SuperBreaker/Menu_Super_Breaker.png') }}",
-                "{{ asset('images/projets/SuperBreaker/Menu_Super_Breaker.png') }}",
-                "{{ asset('images/projets/SuperBreaker/Menu_Super_Breaker.png') }}",
+                "{{ asset('images/projets/SiteVitrine/Menu_Site_Vitrine.png') }}",
                 "{{ asset('images/projets/SpaceInvader/Menu_Space_Invader.png') }}"
             ];
         </script>
         <script src="{{ asset('js/carrou.js') }}">
         </script>
-
+            {% for projet in getProjets() %}
+                {% set titre = projet.titre %}
+                {% set lienProjet = projet.lienProjet %}
+                {% set lienDemo = projet.lienDemo %}
+                {% set lienImage = projet.lienImage %}
+                {% set description = projet.description %}
+                {% set classeRealisation = projet.classeRealisation %}
+                {% set anneeRealisation = projet.anneeRealisation %}
+                {% set languageUtlises = projet.languageUtlises %}
+                <section>
+                    <img style="grid-area: i" src="{{ asset(lienImage) }}" alt="">
+                    <h2 style="grid-area: titre">{{ titre }}</h2>
+                    <p style="grid-area: langue">Languages utilisés : {{ languageUtlises }}</p>
+                    <p style="grid-area: classeAnnee">Réalisé en {{ classeRealisation }}, {{ anneeRealisation }}</p>
+                    <p style="grid-area: description">{{ description }}</p>
+                    <a style="grid-area: lienProjet" href="{{ lienProjet }}">Lien vers le projet</a>
+                    <a style="grid-area: lienDemo" href="{{ lienDemo }}">Lien vers la démo</a>
+                </section>
+            {% endfor %}
     </screen>
-    {#    {% for projet in getProjets() %} #}
-    {#        {% set titre = projet.titre %} #}
-    {#        {% set lienProjet = projet.lienProjet %} #}
-    {#        {% set lienDemo = projet.lienDemo %} #}
-    {#        {% set lienImage = projet.lienImage %} #}
-    {#        {% set description = projet.description %} #}
-    {#        {% set classeRealisation = projet.classeRealisation %} #}
-    {#        {% set anneeRealisation = projet.anneeRealisation %} #}
-    {#        {% set languageUtlises = projet.languageUtlises %} #}
-
-    {#        <h2>{{ titre }}</h2> #}
-    {#        <p>{{ description }}</p> #}
-    {#        <img src="{{ asset(lienImage) }}" alt=""> #}
-    {#        <a href="{{ lienProjet }}">Lien vers le projet</a> #}
-    {#        <a href="{{ lienDemo }}">Lien vers la démo</a> #}
-    {#        <p>Réalisé en {{ classeRealisation }}, {{ anneeRealisation }}</p> #}
-    {#        <p>Langues utilisées : {{ languageUtlises }}</p> #}
-    {#    {% endfor %} #}
 {% endblock %}

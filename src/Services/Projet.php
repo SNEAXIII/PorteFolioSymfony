@@ -66,5 +66,16 @@ class Projet
         "Scratch 2",
         "images/projets/SpaceInvader/Menu_Space_Invader.png"
     );
+    $toReturn["SiteVitrine"] = new Projet
+    (
+        "Site Vitrine Fictif",
+        "",
+        "",
+        "Ce projet a été réalisé pour un projet de site vitrine fictif. Il fallait imaginer un site qui présente l'entreprise, son histoire en bref, les services proposés",
+        "1ère année de BTS SIO",
+        2022,
+        "PHP 8, HTML 5, CSS 3 et SQL",
+        "images/projets/SiteVitrine/Menu_Site_Vitrine.png"
+    );
     return $toReturn;
 }

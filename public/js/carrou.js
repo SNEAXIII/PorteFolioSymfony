@@ -31,4 +31,5 @@ document.body.onload = function () {
         container.style.transform = "translate(" + p * 800 + "px)";
         container.style.transition = "all 0.5s ease"
     }
+    var interval = setInterval(clicDroit, 10000)
 }
