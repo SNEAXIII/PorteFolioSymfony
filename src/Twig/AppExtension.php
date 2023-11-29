@@ -27,5 +27,4 @@ class AppExtension extends AbstractExtension
     {
         return getProjetObjects();
     }
-
 }
