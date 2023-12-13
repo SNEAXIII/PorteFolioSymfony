@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
-*{
+
+* {
     font-family: 'Exo 2', sans-serif;
     color: black;
     margin: 0;
@@ -8,15 +9,17 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
 body {
     background: #dae0e3;
 }
-a{
+
+a {
     text-decoration: unset;
     cursor: pointer;
 }
-ol
-{
+
+ol {
     list-style: none;
 }
 
